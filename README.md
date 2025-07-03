@@ -1,42 +1,86 @@
-# From Data to Models:  Analyzing and Integrating Biological Data into Mechanistic Models
+# From Data to Models: Analyzing and Integrating Biological Data into Mechanistic Models
 
+Welcome to the GitHub repository for the **PhD Course: From Data to Models**. This course introduces participants to mechanistic modeling in biology, emphasizing how to analyze and integrate real experimental data into computational models. Through lectures and hands-on sessions, students will work with tools such as Petri Nets, epimod, and Flux Balance Analysis (FBA).
 
+---
 
+## Course Structure
 
+The repository is organized into four folders:
 
-## Golgi_model
-   ![PN_Retrieval](https://user-images.githubusercontent.com/81301099/161936773-a740437c-599a-4607-86ec-6d5b03c38d5a.png)
-    
-   Fig. 1) PN representation of PPFIA1-dependent apico-basolateral polarity pathway.
-  
-  <p> The model consist in 27 places and 37 transitions.
-  
-  Our simplified representation of a single cell encompasses five cellular compartments, as described in Fig. 1:
-  1. basal membrane; 
-  2. cytosol;
-  3. nucleus;
-  4. Golgi Apparatus; 
-  5. apical membrane.
-  
-These compartments partake in three functional and interconnected phenomena, highlighted in the PN with colored boxes (Fig. 1):
-  1. the integrin α5β1 recycling loop, coupled with FN secretion, which spans the entirety of the cell, from the basal membrane through the cytoplasm up to the apical membrane (see Fig. 1, teal colored box);
-  2. ATAC-dependent modulation of MAPK13 and MAPK14 gene expression (see Fig. 1, blue box);
-  3. regulation of Golgi secretion through the control of PI4P levels on TGN membranes (see Fig. 1, yellow box). 
-                                                                                                                     
-  
-<p> The model simulates the PPFIA1-dependent pathways occurring in a single representative EC as PPFIA1 is artificially removed from the cell to transition from a physiological condition to one where polarity is absent. <p\>
- 
-  
-<p> Model construction and analysis was performed using the GreatMod framework, which provides an intuitive graphical interface for model construction based on PNs and extensions, and automatic derivation of the low-level mathematical processes (deterministic or stochastic) characterizing the system dynamics. <p\>
+- `Day1`: Introduction to mechanistic modeling, Petri Nets, and the epimod framework
+- `Day2`: Working with experimental data and defining models
+- `Day3`: Model calibration, prediction, and FBA
+- `Day4`: Data integration and advanced modeling strategies
 
-The GolgiMod_model folder contains the main R script "MainAnalysis.R", where it is possible to find the commands exploited during the analysis, and several folders.
-  
-Folders:
+Each folder includes:
+- Slides
+- Scripts
+- Hands-on examples and datasets
 
-1.  **Net** contains the PNPRO file corresponding to the PN exploited to model the PPFIA1-dependent apico-basolateral polarity pathway, the C++ code regarding the general transitions, and the solver (which should be generated before starting the analysis);
-2.  **R\_functions** stores all the R scripts to generate the plots and to run the analysis;
-3.  **Input** contains all the csv files (e.g., reference, parameter lists) necessary to run the analysis;
-4.  **Sensitivity** stores the RDatas storing the PRCC values for a subset of places and their respective plot (saved as png).
-  
-<p> A detailed description of the model and results is reported in Dr. Dora Tortarolo's PhD Thesis. <p\>
-    
+---
+
+## Course Outline
+
+### Day 1 – Introduction to Mechanistic Modeling and the Importance of Data
+- Welcome and course overview
+- Introduction to computational models in biology
+- Mechanistic modeling foundations: Petri Nets and the epimod framework
+- Hands-on session: the Schlögl model, exploring dynamics and sensitivity
+
+### Day 2 – From Case Study to Data Analysis
+- From experimental data to model parameters
+- Real-world case study: biological context and modeling needs
+- Hands-on session: data analysis using ORCA
+- Model construction from raw data
+
+### Day 3 – Calibration and Predictive Modeling
+- Overview of model calibration techniques
+- Performing predictive simulations and what-if analyses
+- Introduction to Flux Balance Analysis (FBA)
+
+### Day 4 – Data Integration and Advanced Modeling
+- Integrating FBA with experimental data for improved predictions
+- Introduction to UnifiedGreatMOD for linking heterogeneous data and models
+- Hands-on session: FBA case study with integrated data
+- Course wrap-up and summary of key concepts
+
+---
+
+## Required Tools
+
+To run the examples and participate in the hands-on activities, the following tools are required:
+
+### 1. GreatSPN
+Graphical tool for drawing and simulating Petri Nets.  
+Installation instructions and downloads are available at:  
+[greatspnHOWTOINSTALL](https://github.com/greatspn/SOURCES/blob/master/docs/INSTALL.md)
+
+### 2. Docker
+Docker is required to run the `epimod` framework via containerized images.  
+Follow the installation guide here: [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
+
+After installation, enable non-root access to Docker with:
+
+```bash
+sudo groupadd docker      # Create the docker group (if not already present)
+sudo usermod -aG docker $USER
+```
+
+### 3. R, RStudio, and epimod (optional for local execution)
+These are not required if you are using the HPC servers provided during the course.
+
+To set up locally:
+
+Install R and RStudio.
+
+Install required packages in R:
+```r
+install.packages("remotes")
+install.packages("fdatest")
+remotes::install_github('qBioTurin/epimod', ref='epimod_pFBA', dependencies=TRUE)
+
+library(epimod)
+downloadContainers()  # Downloads all necessary Docker images
+```
+
