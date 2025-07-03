@@ -49,7 +49,9 @@ Each folder includes:
 
 ## Required Tools
 
-To run the examples and participate in the hands-on activities, the following tools are required:
+To run the examples and participate in the hands-on activities, the following tools are required.
+
+Note: Docker and R are already installed on the HPC servers provided for the course. Local installation is optional.
 
 ### 1. GreatSPN
 Graphical tool for drawing and simulating Petri Nets.  
