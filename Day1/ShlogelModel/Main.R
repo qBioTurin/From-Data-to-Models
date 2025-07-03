@@ -66,14 +66,15 @@ AnalysisPlot$list.plX1
 ### Sensitivity analysis
 
 ##########################################################
-## Simple version where only the transition rates vary. ##
+## Simple version where only the initial marking of the X1 place vary. ##
 ##########################################################
 
 start_time <- Sys.time()
 sensitivity<-model.sensitivity(n_config = 100,
                                parameters_fname = "Input/Functions_list_sensitivity.csv", 
                                solver_fname = "Schlogl_reduced.solver",
-                               target_value =  "Rfunction/Target.R" ,
+                               functions_fname = "Rfunction/Functions.R",
+                               target_value =  "Target" ,
                                f_time = 100, # days
                                s_time = 1, # days      
                                parallel_processors = 2
@@ -81,100 +82,3 @@ sensitivity<-model.sensitivity(n_config = 100,
 
 end_time <- Sys.time()-start_time
 
-
-
-
-
-start_time <- Sys.time()
-sensitivity<-model.sensitivity(n_config = 100,
-                                  parameters_fname = "Input/Functions_list.csv", 
-                                  solver_fname = "Schlogl_reduced.solver",
-                                  reference_data = "Input/reference_data.csv",
-                                  distance_measure_fname = "Rfunction/msqd.R" ,
-                                  target_value_fname = "Rfunction/Target.R" ,
-                                  f_time = 100, # days
-                                  s_time = 1, # days      
-                                  parallel_processors = 2
-)
-
-end_time <- Sys.time()-start_time
-
-## Let draw the trajectories
-source("./Rfunction/SensitivityPlot.R")
-plX1
-
-## Version where only the PRCC is calculated
-# sensitivity<-sensitivity_analysis(n_config = 100,
-#                                   parameters_fname = "Input/Functions_list.csv", 
-#                                   functions_fname = "Rfunction/Functions.R",
-#                                   solver_fname = "Schlogl_general.solver",
-#                                   target_value_fname = "Rfunction/Target.R" ,
-#                                   parallel_processors = 1,
-#                                   f_time = 100 # days
-#                                   s_time = 1 # days
-#                                   )
-
-## Version where only the ranking is calculated
-# sensitivity<-sensitivity_analysis(n_config = 100,
-#                                   parameters_fname = "Input/Functions_list.csv", 
-#                                   functions_fname = "Rfunction/Functions.R",
-#                                   solver_fname = "Schlogl_general.solver",
-#                                   reference_data = "Input/reference_data.csv",
-#                                   distance_measure_fname = "Rfunction/msqd.R" ,
-#                                   parallel_processors = 1,
-#                                   f_time = 100 # days
-#                                   s_time = 1 # days
-#                                   )
-
-## Complete and more complex version where all the parameters for calculating
-## the PRCC and the ranking are considered, and the initial conditions vary too.
-
-start_time <- Sys.time()
-
-sensitivity<-sensitivity_analysis(n_config = 100,
-                                   parameters_fname = "Input/Functions_list2.csv", 
-                                   functions_fname = "Rfunction/Functions.R",
-                                   solver_fname = "Schlogl_general.solver",
-                                   reference_data = "Input/reference_data.csv",
-                                   distance_measure_fname = "Rfunction/msqd.R" ,
-                                   target_value_fname = "Rfunction/Target.R" ,
-                                   parallel_processors = 2,
-                                   f_time = 30, # days
-                                   s_time = 1 # days
-                                   )
-
-end_time <- Sys.time() - start_time
-
-source("./Rfunction/SensitivityPlot.R")
-
-plX1
-
-### Calibration analysis
-
-start_time <- Sys.time()
-
-model.calibration(parameters_fname = "Input/Functions_list_Calibration.csv",
-                  functions_fname = "Rfunction/FunctionCalibration.R",
-                  solver_fname = "Schlogl_general.solver",
-                  reference_data = "Input/reference_data.csv",
-                  distance_measure_fname = "Rfunction/msqd.R" ,
-                  f_time = 30, # days
-                  s_time = 1, # days
-                  # Vectors to control the optimization
-                  ini_v = c(247, 0.06, 0.0005),
-                  ub_v = c(249, 0.08, 0.0002),
-                  lb_v = c(248, 0.028, 0.00009),
-                  max.time = 1
-)
-
-end_time <- Sys.time()-start_time
-
-source("Rfunction/CalibrationPlot.R")
-
-plX1
-
-################################
-## from Rmd to pdf generation ##
-################################
-
-rmarkdown::render("ReadME.Rmd", "pdf_document")
