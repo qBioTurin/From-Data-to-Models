@@ -1,0 +1,7 @@
+Error in gzfile(file, "rb") : cannot open the connection
+Calls: readRDS -> gzfile
+In addition: Warning message:
+In gzfile(file, "rb") :
+  cannot open compressed file '/home/docker/data/Schlogl_reduced_analysis/params_Schlogl_reduced-analysis.RDS', probable reason 'Permission denied'
+Execution halted
+/home/docker/data/Schlogl_reduced_analysis/params_Schlogl_reduced-analysis.RDS

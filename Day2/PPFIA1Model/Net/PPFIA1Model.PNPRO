@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="New project" version="121">
-  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="75">
+  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false" view-rates="false" zoom="50">
     <nodes>
       <transition alt-name-fn="LATEX_TEXT" delay=" 0.003333333" label-x="0.5" label-y="2.0" name="EndocytosisR" nservers-x="0.5" rotation="-0.0" shown-as="\mathit{Endocytosis}\_{R}" type="EXP" x="127.55" y="99.0"/>
       <place alt-name-fn="LATEX_TEXT" label-x="7.0" label-y="0.0" name="Itga5Itgb1Fn1Rab21C" shown-as="\mathrm{Vesicle}\_\mathrm{Integrin}\_\mathrm{FN}\_\mathrm{Rab21}" x="122.0" y="94.0"/>
@@ -11,12 +11,12 @@
       <place alt-name-fn="LATEX_TEXT" label-x="5.5" label-y="-1.0" name="Vesicle_Itga5Itgb1_Rab11bC" shown-as="\mathrm{Vesicle}\_\mathrm{Integrin}\_\mathrm{Rab11b}" x="113.0" y="74.0"/>
       <transition label-x="-1.5" label-y="-2.0" name="Docking" nservers-x="0.5" rotation="-0.0" type="EXP" x="89.55" y="97.0"/>
       <place alt-name-fn="LATEX_TEXT" label-x="-0.5" label-y="2.0" name="Itga5Itgb1Fn1nMb" shown-as="\mathrm{Integrin}\_{FN}\_{M}b" x="112.0" y="104.0"/>
-      <transition alt-name-fn="LATEX_TEXT" delay="FN:TrascriptMAPK13" label-x="-0.5" label-y="-2.0" name="TranscriptionalReg_MAPKA" shown-as="\mathit{TranscriptionalReg}\hspace{1pt}\_\mathit{MAPK13}" type="GEN" x="24.55" y="64.0"/>
+      <transition alt-name-fn="LATEX_TEXT" delay="Max[0.0 , FromList[&quot;rateMAPKA&quot;, 0]  + FromList[&quot;CostMAPKA&quot;, 0] * #NCn]" label-x="-0.5" label-y="-2.0" name="TranscriptionalReg_MAPKA" nservers-x="0.5" shown-as="\mathit{TranscriptionalReg}\hspace{1pt}\_\mathit{MAPK13}" type="EXP" x="24.55" y="64.0"/>
       <place alt-name-fn="LATEX_TEXT" label-x="-2.0" label-y="2.0" name="MapkA" shown-as="\mathrm{MAPKA}" x="29.0" y="44.0"/>
-      <transition alt-name-fn="LATEX_TEXT" delay="1" label-x="-0.5" label-y="-2.5" name="FromPtdIns4P_toPtdIns" nservers-x="0.5" shown-as="Dephosphorylation" type="EXP" x="79.55" y="39.0"/>
+      <transition alt-name-fn="LATEX_TEXT" delay="1" label-x="-0.5" label-y="-2.5" name="FromP_lipid_tolipid" nservers-x="0.5" shown-as="Dephosphorylation" type="EXP" x="79.55" y="39.0"/>
       <place alt-name-fn="LATEX_TEXT" label-x="0.5" label-y="-1.5" marking="10" name="P_lipid" shown-as="\mathrm{p}_\hspace{1pt}\_{lipid}" x="74.0" y="34.0"/>
       <place alt-name-fn="LATEX_TEXT" label-x="-1.0" label-y="2.0" name="lipid" shown-as="\mathrm{Lipid}" x="74.0" y="44.0"/>
-      <transition alt-name-fn="LATEX_TEXT" delay="1" label-x="0.5" label-y="2.0" name="FromPtdIns_toPtdIns4P" nservers-x="0.5" shown-as="Phosphorylation" type="EXP" x="69.55" y="39.0"/>
+      <transition alt-name-fn="LATEX_TEXT" delay="1" label-x="0.5" label-y="2.0" name="Fromlipid_toP_lipid" nservers-x="0.5" shown-as="Phosphorylation" type="EXP" x="69.55" y="39.0"/>
       <place alt-name-fn="LATEX_TEXT" label-x="-1.5" label-y="2.0" name="PKDx" shown-as="\mathrm{PKD}" x="44.0" y="44.0"/>
       <place alt-name-fn="LATEX_TEXT" label-y="-2.0" name="PrkdX" shown-as="\mathrm{PKD}^{*}" x="44.0" y="34.0"/>
       <transition alt-name-fn="LATEX_TEXT" delay="1" label-x="-0.5" label-y="2.0" name="Activation_PRKD1x" nservers-x="0.5" shown-as="\mathit{Activation}\hspace{1pt}\_\mathit{PKD}\hspace{1pt}" type="EXP" x="39.55" y="39.0"/>
@@ -29,8 +29,8 @@
       <transition alt-name-fn="LATEX_TEXT" label-y="-2.0" name="Inactivation_PRDK1X" nservers-x="0.5" rotation="3.141592653589793" shown-as="\mathit{Inactivation}\hspace{1pt}\_\mathit{PKD}^{*}" type="EXP" x="49.55" y="39.0"/>
       <place alt-name-fn="LATEX_TEXT" label-x="2.0" label-y="-1.5" name="Ppfia1n" shown-as="\mathrm{PPFIA1n}" x="69.0" y="74.0"/>
       <place alt-name-fn="LATEX_TEXT" label-x="-1.0" label-y="-1.5" name="Ppfia1_NCn" shown-as="\mathrm{PPFIA1}\_\mathrm{NCn}" x="59.0" y="74.0"/>
-      <transition alt-name-fn="LATEX_TEXT" delay="FN:IntRate" label-x="0.5" label-y="2.0" name="Interaction_PPFIA1NC" rotation="3.141592653589793" shown-as="\mathit{Interaction}\hspace{1pt}\_\mathit{PPFIA1}\mathit{NCn}" type="GEN" x="64.55" y="79.0"/>
-      <transition alt-name-fn="LATEX_TEXT" delay="FN:DissRate" name="Dissociation_PPFIA1NCn" rotation="3.141592653589793" shown-as="\mathit{Dissociation}\hspace{1pt}\_\mathit{PPFIA1}\mathit{NCn}" type="GEN" x="64.55" y="69.0"/>
+      <transition alt-name-fn="LATEX_TEXT" delay="1" label-x="0.5" label-y="2.0" name="Interaction_PPFIA1NC" nservers-x="0.5" rotation="3.141592653589793" shown-as="\mathit{Interaction}\hspace{1pt}\_\mathit{PPFIA1}\mathit{NCn}" type="EXP" x="64.55" y="79.0"/>
+      <transition alt-name-fn="LATEX_TEXT" delay="1" name="Dissociation_PPFIA1NCn" nservers-x="0.5" rotation="3.141592653589793" shown-as="\mathit{Dissociation}\hspace{1pt}\_\mathit{PPFIA1}\mathit{NCn}" type="EXP" x="64.55" y="69.0"/>
       <text-box bold="true" border-color="#000000" fill-color="#ffffff" height="14.0" horiz-pos="2" name="copy___textBox1" shape="ROUND_RECTANGLE" text-color="#000000" text-size="HEADER1" vert-pos="3" width="140.25" x="6.75" y="0.0">Extracellular space</text-box>
       <place alt-name-fn="LATEX_TEXT" label-x="4.5" label-y="0.0" name="Itga5Itgb1G" shown-as="\mathrm{Vesicle}\_\mathrm{Integrin}" x="122.0" y="58.0"/>
       <transition label-x="-0.5" label-y="-2.0" name="VesicleBudding" nservers-x="0.5" type="EXP" x="79.55" y="29.0"/>
@@ -47,7 +47,7 @@
       <transition alt-name-fn="LATEX_TEXT" label-y="2.0" name="Activation_LipidKx" nservers-x="0.5" shown-as="\mathit{Activation}\hspace{1pt}\_\mathit{LipidK}" type="EXP" x="54.55" y="39.0"/>
       <place alt-name-fn="LATEX_TEXT" label-y="2.0" name="Lipidkx" shown-as="\mathrm{LipidK}" x="59.0" y="44.0"/>
       <transition alt-name-fn="LATEX_TEXT" label-y="-2.0" name="Inactivation_LipidKX" nservers-x="0.5" shown-as="\mathit{Inactivation}\hspace{1pt}\_\mathit{LipidK}^{*}" type="EXP" x="64.55" y="39.0"/>
-      <transition alt-name-fn="LATEX_TEXT" delay="FN:TrascriptMAPK14" label-x="-1.0" label-y="-2.0" name="TranscriptionalReg_MAPKB" shown-as="\mathit{TranscriptionalReg}\hspace{1pt}\_\mathit{MAPKB}" type="GEN" x="84.55" y="65.0"/>
+      <transition alt-name-fn="LATEX_TEXT" delay="Max[0.0 , FromList[&quot;rateMAPKB&quot;, 0] - FromList[&quot;CostMAPKB&quot;, 0] * #NCn]" label-x="-1.0" label-y="-2.0" name="TranscriptionalReg_MAPKB" nservers-x="0.5" shown-as="\mathit{TranscriptionalReg}\hspace{1pt}\_\mathit{MAPKB}" type="EXP" x="84.55" y="65.0"/>
       <place alt-name-fn="LATEX_TEXT" label-x="-2.5" label-y="2.0" name="MAPKB" shown-as="\mathrm{MAPKB}" x="89.0" y="54.0"/>
       <place alt-name-fn="LATEX_TEXT" label-y="-1.5" name="Sacm1lX" shown-as="\mathrm{SACM1L}^{*}" x="89.0" y="34.0"/>
       <place alt-name-fn="LATEX_TEXT" label-y="2.0" name="Sacm1lx" shown-as="\mathrm{SACM1L}" x="89.0" y="44.0"/>
@@ -56,13 +56,13 @@
       <transition alt-name-fn="LATEX_TEXT" label-y="2.0" name="Input_PKDx" nservers-x="0.5" rotation="3.141592653589793" shown-as="\mathit{Input}\hspace{1pt}\_\mathit{PKD}\hspace{1pt}" type="EXP" x="44.55" y="49.0"/>
       <transition alt-name-fn="LATEX_TEXT" label-x="-0.5" label-y="-2.0" name="ConsuptionMAPKB" nservers-x="0.5" shown-as="\mathit{Consumption}\_{MAPKB}" type="EXP" x="94.55" y="49.0"/>
       <transition alt-name-fn="LATEX_TEXT" label-x="-1.0" label-y="-2.0" name="ConsuptionMAPKA" nservers-x="0.5" shown-as="\mathit{Consumption}\hspace{1pt}\_\mathit{MAPKA}" type="EXP" x="24.55" y="39.0"/>
-      <place alt-name-fn="LATEX_TEXT" label-x="0.5" label-y="-2.0" name="MAPK13_PKD" shown-as="\mathrm{Inactive}\_\mathrm{PKD}" x="29.0" y="34.0"/>
+      <place alt-name-fn="LATEX_TEXT" label-x="0.5" label-y="-2.0" name="MAPKA_PKD" shown-as="\mathrm{Inactive}\_\mathrm{PKD}" x="29.0" y="34.0"/>
       <transition name="Consumption_PKD" nservers-x="0.5" type="EXP" x="34.55" y="29.0"/>
       <place alt-name-fn="LATEX_TEXT" label-y="2.0" name="NCm" shown-as="\mathrm{NCm}" x="44.0" y="104.0"/>
       <place alt-name-fn="LATEX_TEXT" label-x="2.0" label-y="2.0" name="Ppfia1m" shown-as="\mathrm{PPFIA1m}" x="69.0" y="104.0"/>
       <place alt-name-fn="LATEX_TEXT" label-x="-1.5" label-y="2.0" name="Ppfia1_NCm" shown-as="\mathrm{PPFIA1}\_\mathrm{NCm}" x="59.0" y="104.0"/>
-      <transition alt-name-fn="LATEX_TEXT" delay="FN:IntRate" label-x="0.5" label-y="2.0" name="Interaction_PPFIA1NCm" rotation="3.141592653589793" shown-as="\mathit{Interaction}\hspace{1pt}\_\mathit{PPFIA1}\mathit{NCm}" type="GEN" x="64.55" y="109.0"/>
-      <transition alt-name-fn="LATEX_TEXT" delay="FN:DissRate" name="Dissociation_PPFIA1NCm" rotation="3.141592653589793" shown-as="\mathit{Dissociation}\hspace{1pt}\_\mathit{PPFIA1}\mathit{NCm}" type="GEN" x="64.55" y="99.0"/>
+      <transition alt-name-fn="LATEX_TEXT" delay="1" label-x="0.5" label-y="2.0" name="Interaction_PPFIA1NCm" nservers-x="0.5" rotation="3.141592653589793" shown-as="\mathit{Interaction}\hspace{1pt}\_\mathit{PPFIA1}\mathit{NCm}" type="EXP" x="64.55" y="109.0"/>
+      <transition alt-name-fn="LATEX_TEXT" delay="1" name="Dissociation_PPFIA1NCm" nservers-x="0.5" rotation="3.141592653589793" shown-as="\mathit{Dissociation}\hspace{1pt}\_\mathit{PPFIA1}\mathit{NCm}" type="EXP" x="64.55" y="99.0"/>
       <transition label-x="-1.5" label-y="2.5" name="NC_MN" nservers-x="0.5" type="EXP" x="41.55" y="89.0"/>
       <transition label-x="-0.5" label-y="-2.0" name="NC_NM" nservers-x="0.5" type="EXP" x="47.55" y="89.0"/>
       <transition label-y="2.5" name="PPFIA1_MN" nservers-x="0.5" type="EXP" x="66.55" y="89.0"/>
@@ -87,19 +87,19 @@
       <arc head="Movement_MG" kind="INPUT" tail="Itga5Itgb1Fn1Rab21C">
         <point x="128.0" y="93.5"/>
       </arc>
-      <arc head="lipid" kind="OUTPUT" tail="FromPtdIns4P_toPtdIns">
+      <arc head="lipid" kind="OUTPUT" tail="FromP_lipid_tolipid">
         <point x="79.5" y="44.0"/>
       </arc>
-      <arc head="FromPtdIns4P_toPtdIns" kind="INPUT" tail="P_lipid">
+      <arc head="FromP_lipid_tolipid" kind="INPUT" tail="P_lipid">
         <point x="79.5" y="36.0"/>
       </arc>
       <arc head="Fn1" kind="OUTPUT" tail="Input_FN1">
         <point x="71.0" y="26.0"/>
       </arc>
-      <arc head="FromPtdIns_toPtdIns4P" kind="INPUT" tail="lipid">
+      <arc head="Fromlipid_toP_lipid" kind="INPUT" tail="lipid">
         <point x="71.0" y="44.0"/>
       </arc>
-      <arc head="P_lipid" kind="OUTPUT" tail="FromPtdIns_toPtdIns4P">
+      <arc head="P_lipid" kind="OUTPUT" tail="Fromlipid_toP_lipid">
         <point x="71.0" y="36.0"/>
       </arc>
       <arc head="Interaction_PPFIA1NC" kind="INPUT" mult-x="0.9710177276389587" mult-y="0.8840709105558489" tail="Ppfia1n">
@@ -164,7 +164,7 @@
       <arc head="Activation_LipidKx" kind="INPUT" mult-k="1.33642578125" mult-x="-0.6920190854341115" mult-y="1.4619713718488327" tail="Lipidkx">
         <point x="56.0" y="44.0"/>
       </arc>
-      <arc head="FromPtdIns_toPtdIns4P" kind="INPUT" tail="lipidkX">
+      <arc head="Fromlipid_toP_lipid" kind="INPUT" tail="lipidkX">
         <point x="69.0" y="35.0"/>
       </arc>
       <arc head="Activation_LipidKx" kind="INPUT" tail="PrkdX">
@@ -182,10 +182,10 @@
       <arc head="Inactivation_SACM1LX" kind="INPUT" tail="Sacm1lX">
         <point x="86.0" y="36.0"/>
       </arc>
-      <arc head="lipidkX" kind="OUTPUT" tail="FromPtdIns_toPtdIns4P">
+      <arc head="lipidkX" kind="OUTPUT" tail="Fromlipid_toP_lipid">
         <point x="70.0" y="34.0"/>
       </arc>
-      <arc head="Sacm1lX" kind="OUTPUT" tail="FromPtdIns4P_toPtdIns">
+      <arc head="Sacm1lX" kind="OUTPUT" tail="FromP_lipid_tolipid">
         <point x="82.5" y="35.0"/>
       </arc>
       <arc head="PKDx" kind="OUTPUT" tail="Input_PKDx"/>
@@ -210,10 +210,10 @@
       <arc head="MapkA" kind="OUTPUT" tail="Sequestration">
         <point x="32.0" y="40.0"/>
       </arc>
-      <arc head="FromPtdIns4P_toPtdIns" kind="INPUT" tail="Sacm1lX">
+      <arc head="FromP_lipid_tolipid" kind="INPUT" tail="Sacm1lX">
         <point x="81.5" y="34.0"/>
       </arc>
-      <arc head="MAPK13_PKD" kind="OUTPUT" tail="Sequestration">
+      <arc head="MAPKA_PKD" kind="OUTPUT" tail="Sequestration">
         <point x="34.5" y="36.0"/>
       </arc>
       <arc head="Sequestration" kind="INPUT" tail="MapkA">
@@ -246,7 +246,7 @@
       <arc head="Itga5Itgb1Fn1Rab21C" kind="OUTPUT" tail="Endocytosis">
         <point x="119.0" y="96.5"/>
       </arc>
-      <arc head="Consumption_PKD" kind="INPUT" tail="MAPK13_PKD">
+      <arc head="Consumption_PKD" kind="INPUT" tail="MAPKA_PKD">
         <point x="35.0" y="33.5"/>
       </arc>
       <arc head="NCm" kind="OUTPUT" mult-k="1.18935546875" tail="Dissociation_PPFIA1NCm">
