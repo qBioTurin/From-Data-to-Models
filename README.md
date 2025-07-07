@@ -88,3 +88,6 @@ library(epimod)
 downloadContainers()  # Downloads all necessary Docker images
 ```
 
+### 4. ORCA
+
+https://github.com/qBioTurin/ORCA
