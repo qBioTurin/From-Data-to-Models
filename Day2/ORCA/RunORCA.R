@@ -20,7 +20,11 @@
 #
 # ---
 #
-#### Option 2: Local Installation from GitHub
+#### Option 2: how to run docker
+#
+# docker run --rm -p 3838:3838 qbioturin/orca-shiny-application:latest
+#
+#### Option 3: Local Installation from GitHub
 #
 # If you prefer to install and run ORCA locally:
 #
