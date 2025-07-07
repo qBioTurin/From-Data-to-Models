@@ -2,6 +2,8 @@
 
 Welcome to the GitHub repository for the **PhD Course: From Data to Models**. This course introduces participants to mechanistic modeling in biology, emphasizing how to analyze and integrate real experimental data into computational models. Through lectures and hands-on sessions, students will work with tools such as Petri Nets, epimod, and Flux Balance Analysis (FBA).
 
+[Link Materials](https://drive.google.com/drive/folders/1mGFzbS1nfIQ80TwQxC0FIkY0Mz6y_j7i?usp=drive_link)
+
 ---
 
 ## Course Structure
