@@ -1,7 +1,0 @@
-|5
-Max[0.0, FromList["rateMAPKA", 0] + FromList["CostMAPKA", 0] * #NCn]
-|21
-Max[0.0, FromList["rateMAPKB", 0] - FromList["CostMAPKB", 0] * #NCn]
-|256
-%
-|
