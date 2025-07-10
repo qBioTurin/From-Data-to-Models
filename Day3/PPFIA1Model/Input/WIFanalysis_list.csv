@@ -1,0 +1,41 @@
+i; init; InitGeneration; n_file="/home/docker/data/Input/NAMES.RDS"
+c; Input_Lipid ; calibration.function; id = 6
+c; Input_PKDx ; calibration.function; id = 7
+c; ConsuptionMAPKA ; calibration.function; id = 8
+c; ConsuptionMAPKB ; calibration.function; id = 9
+c; Sequestration; calibration.function; id = 10
+c; Interaction_PPFIA1NCm; calibration.function; id = 11
+c; Interaction_PPFIA1NCn; calibration.function; id = 11
+c; Dissociation_PPFIA1NCn; calibration.function; id = 12
+c; Dissociation_PPFIA1NCm; calibration.function; id = 12
+c; Activation_PKDx; calibration.function; id = 13
+c; Inactivation_PKDX; calibration.function; id = 14
+c; Activation_LipidKx ;calibration.function; id = 15
+c; Inactivation_LipidKX ;calibration.function; id = 16
+c; Phosphorylation ;calibration.function; id = 17
+c; Dephosphorylation ;calibration.function; id = 18
+c; Inactivation_SACM1LX	;calibration.function; id = 19
+c; Activation_SACM1Lx	;calibration.function; id = 20
+c; Docking ;calibration.function; id = 21
+c; Movement_MG ; calibration.function; id = 22
+c; Movement_GM ; calibration.function; id = 23
+c; Exocytosis; calibration.function; id = 24
+c; Endocytosis ; calibration.function; id = 25
+c; Endocytosis_R; calibration.function; id = 26
+c; Recycling_A; calibration.function; id = 27
+c; Recycling_B; calibration.function; id =  28
+c; VesicleBudding; calibration.function; id = 29
+g; CostMAPKA; calibration.function; id = 30
+g; CostMAPKB; calibration.function; id = 31
+c; Consumption_PKD; calibration.function; id = 32
+c; Endocytosis_A; calibration.function; id = 33
+c; NC_MN	; calibration.function; id = 34; type = "speed-up"
+c; NC_NM; calibration.function; id = 35; type = "slow-down"
+c; PPFIA1_MN; calibration.function; id = 36
+c; PPFIA1_NM	; calibration.function; id = 37
+c; PPFIA1_NC_MN; calibration.function; id = 38
+c; PPFIA1_NC_NM; calibration.function; id = 39
+c; ExocitosiRetro; calibration.function; id = 40
+g; rateMAPKA; 0.0022
+g; rateMAPKB; 0.0031
+g; maxAtac; InitGeneration; n_file="/home/docker/data/Input/NAMES.RDS"; scenario = "MaxNC";

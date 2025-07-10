@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="Bistability_test" version="121">
+  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false">
+    <nodes>
+      <transition delay="0.03" delay-x="-2.5" delay-y="0.0" label-y="-2.0" name="k1" nservers-x="0.5" type="EXP" x="5.55" y="4.0"/>
+      <transition delay="0.0001" delay-x="-3.5" delay-y="0.0" label-y="-2.0" name="k2" nservers-x="0.5" type="EXP" x="5.55" y="14.0"/>
+      <transition delay="200" delay-x="-0.5" delay-y="2.0" label-y="-2.0" name="k3" nservers-x="0.5" type="EXP" x="15.55" y="4.0"/>
+      <transition delay="3.5" delay-x="-0.5" delay-y="2.0" label-y="-2.0" name="k4" nservers-x="0.5" type="EXP" x="15.55" y="14.0"/>
+      <place label-x="2.0" label-y="0.0" marking="250" name="X1" x="10.0" y="9.0"/>
+    </nodes>
+    <edges>
+      <arc head="k1" kind="INPUT" mult="2" mult-x="-0.5" tail="X1"/>
+      <arc head="X1" kind="OUTPUT" mult="3" mult-x="-0.03269868538910892" mult-y="-1.0" tail="k1">
+        <point x="11.0" y="5.0"/>
+      </arc>
+      <arc head="X1" kind="OUTPUT" tail="k3"/>
+      <arc head="k4" kind="INPUT" tail="X1"/>
+      <arc head="X1" kind="OUTPUT" mult="2" tail="k2">
+        <point x="11.0" y="15.0"/>
+      </arc>
+      <arc head="k2" kind="INPUT" mult="3" mult-x="-0.5" mult-y="-0.5" tail="X1"/>
+    </edges>
+  </gspn>
+  <gspn name="NoApproximation" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false">
+    <nodes>
+      <transition delay="0.06 * (#X1 * (#X1-1))/2" delay-x="-5.0" delay-y="2.0" label-y="-2.0" name="k1" nservers-x="0.5" type="EXP" x="4.55" y="3.0"/>
+      <transition delay="0.0002* (#X1 * (#X1-1))* (#X1-2)/6" delay-x="-5.5" delay-y="2.0" label-y="-2.0" name="k2" nservers-x="0.5" type="EXP" x="5.55" y="15.0"/>
+      <transition delay="200" delay-x="-0.5" delay-y="2.0" label-y="-2.0" name="k3" nservers-x="0.5" type="EXP" x="15.55" y="3.0"/>
+      <transition delay="3.5" delay-x="-0.5" delay-y="2.0" label-y="-2.0" name="k4" nservers-x="0.5" type="EXP" x="15.55" y="14.0"/>
+      <place label-x="2.0" label-y="0.0" marking="250" name="X1" x="10.0" y="9.0"/>
+    </nodes>
+    <edges>
+      <arc head="k1" kind="INPUT" mult="2" mult-x="-0.5" tail="X1"/>
+      <arc head="X1" kind="OUTPUT" mult="3" mult-x="-0.03269868538910892" mult-y="-1.0" tail="k1">
+        <point x="11.0" y="5.0"/>
+      </arc>
+      <arc head="X1" kind="OUTPUT" tail="k3"/>
+      <arc head="k4" kind="INPUT" tail="X1"/>
+      <arc head="X1" kind="OUTPUT" mult="2" tail="k2">
+        <point x="11.0" y="15.0"/>
+      </arc>
+      <arc head="k2" kind="INPUT" mult="3" mult-x="-0.5" mult-y="-0.5" tail="X1"/>
+    </edges>
+  </gspn>
+  <measures gspn-name="PT" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+    </formulas>
+  </measures>
+</project>

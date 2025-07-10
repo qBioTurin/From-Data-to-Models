@@ -1,0 +1,5 @@
+p; X1; 249;
+g; k1; runif; n=1; min = 0.028; max=0.032
+g; k2; runif; n=1; min = 0.00008; max=0.00012
+p; k3; runif; n=1;
+p; k4; runif; n=1;

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="Bistability" version="121">
+  <gspn name="PT" show-color-cmd="false" show-fluid-cmd="false" show-timed-cmd="false">
+    <nodes>
+      <place label-x="2.0" label-y="0.0" marking="10000" name="A" x="2.0" y="7.0"/>
+      <place label-x="2.0" label-y="0.0" marking="248" name="X1" x="12.0" y="7.0"/>
+      <place label-x="2.0" label-y="0.0" marking="20000" name="B" x="22.0" y="7.0"/>
+      <transition delay="0.0001" delay-x="-3.5" delay-y="0.0" label-y="2.0" name="c2" nservers-x="0.5" type="EXP" x="7.55" y="12.0"/>
+      <transition delay="0.0000003" delay-x="-4.5" delay-y="0.0" label-y="-2.0" name="c1" nservers-x="0.5" type="EXP" x="7.55" y="2.0"/>
+      <transition delay="3.5" delay-x="1.0" delay-y="0.0" label-y="2.0" name="c4" nservers-x="0.5" type="EXP" x="17.55" y="12.0"/>
+      <transition delay="0.001" delay-x="1.0" delay-y="0.0" label-y="-2.0" name="c3" nservers-x="0.5" type="EXP" x="17.55" y="2.0"/>
+    </nodes>
+    <edges>
+      <arc head="c1" kind="INPUT" mult="2" mult-x="-0.5" tail="X1"/>
+      <arc head="c2" kind="INPUT" mult="3" mult-x="-0.5" mult-y="-0.5" tail="X1"/>
+      <arc head="X1" kind="OUTPUT" mult="2" tail="c2">
+        <point x="13.0" y="13.0"/>
+      </arc>
+      <arc head="X1" kind="OUTPUT" tail="c3"/>
+      <arc head="X1" kind="OUTPUT" tail="c4"/>
+      <arc head="X1" kind="OUTPUT" mult="3" tail="c1">
+        <point x="13.0" y="3.0"/>
+      </arc>
+      <arc head="c3" kind="INPUT" tail="B"/>
+      <arc head="B" kind="OUTPUT" tail="c4"/>
+      <arc head="c1" kind="INPUT" tail="A"/>
+      <arc head="A" kind="OUTPUT" tail="c2">
+        <point x="4.0" y="9.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <measures gspn-name="PT" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+    </formulas>
+  </measures>
+</project>
