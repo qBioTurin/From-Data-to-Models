@@ -32,8 +32,7 @@ model.analysis(solver_fname = "./Schlogl_reduced.solver",
 
 
 AnalysisPlot = ModelAnalysisPlot(solverTraces_path = "./Schlogl_reduced_analysis/")
-
-p1 <- AnalysisPlot$list.plX1$plX1.1
+AnalysisPlot$list.plX1$plX1.1
 
 ##### Calibration ###### 
 
@@ -44,7 +43,7 @@ model.calibration(parameters_fname = "Input/Functions_list_Calibration.csv",
                   solver_fname = "Schlogl_reduced.solver",
                   reference_data = "Input/reference_data.csv",
                   distance_measure = "msqd" ,
-                  f_time = 30, # days
+                  f_time = 10, # days
                   s_time = 1, # days
                   # Vectors to control the optimization
                   ini_v = c(248, 0.03, 0.0001, 200, 3 ),
@@ -53,8 +52,14 @@ model.calibration(parameters_fname = "Input/Functions_list_Calibration.csv",
 )
 
 end_time <- Sys.time()-start_time
+#Time difference of 6 mins
+
+display_data(volume = "./")
+stop_display()
 
 source("Rfunction/CalibrationPlot.R")
-
 plX1
+
+
+
 
