@@ -62,4 +62,25 @@ plX1
 
 
 
+##### Sensitivity ###### 
+
+start_time <- Sys.time()
+
+model.sensitivity(n_config = 100,
+                  target_value = "targetF",
+                  parallel_processors = 2,
+                  parameters_fname = "Input/sensitivity_parms.csv",
+                  solver_fname = "Schlogl_reduced.solver",
+                  reference_data = "Input/reference_data.csv",
+                  functions_fname = "Rfunction/Functions.R",
+                  distance_measure = "msqd" ,
+                  f_time = 30, # days
+                  s_time = 1 # days
+)
+
+end_time <- Sys.time()-start_time
+
+
+display_data(volume = "./")
+stop_display()
 

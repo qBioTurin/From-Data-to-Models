@@ -1,0 +1,205 @@
+su: ignoring --preserve-environment, it's mutually exclusive with --login
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Listening on http://127.0.0.1:33789
+
+Attaching package: ‘bslib’
+
+The following object is masked from ‘package:utils’:
+
+    page
+
+
+Attaching package: ‘colourpicker’
+
+The following object is masked from ‘package:shiny’:
+
+    runExample
+
+
+Attaching package: ‘shinyWidgets’
+
+The following object is masked from ‘package:bslib’:
+
+    show_toast
+
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Downloading google font Outfit to local cache (/tmp/RtmpDfy4fZ/sass-3fa3935e395)
+Downloading google font Outfit to local cache (/tmp/RtmpDfy4fZ/sass-3fa7a476bb0)
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in RColorBrewer::brewer.pal(min(9, n), "Set1") :
+  minimal value for n is 3, returning requested palette with 3 different levels
+
+Warning: Removed 3 rows containing missing values or values outside the scale range
+(`geom_line()`).
+Warning in RColorBrewer::brewer.pal(min(9, n), "Set1") :
+  minimal value for n is 3, returning requested palette with 3 different levels
+
+Warning: Removed 3 rows containing missing values or values outside the scale range
+(`geom_line()`).
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in RColorBrewer::brewer.pal(min(9, n), "Set1") :
+  minimal value for n is 3, returning requested palette with 3 different levels
+
+Warning: Removed 3 rows containing missing values or values outside the scale range
+(`geom_line()`).
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning: Error in .getReactiveEnvironment()$currentContext: Operation not allowed without an active reactive context.
+• You tried to do something that can only be done from inside a reactive consumer.
+  40: <Anonymous>
+  39: signalCondition
+  38: signal_abort
+  37: rlang::abort
+  36: .getReactiveEnvironment()$currentContext
+  35: getCurrentContext
+  34: private$dependents$register
+  33: rv$get
+  32: cloud_path
+  31: callback [/srv/shiny-server/display/R/mod_data_inputs.R#117]
+   1: runApp
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
