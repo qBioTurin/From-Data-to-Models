@@ -28,10 +28,12 @@ model.analysis(solver_fname = "./Schlogl_reduced.solver",
 )
 
 
+display_data(volume = "./")
+stop_display() 
+
 AnalysisPlot = ModelAnalysisPlot(solverTraces_path = "./Schlogl_reduced_analysis/")
 
 p1 <- AnalysisPlot$list.plX1$plX1.1
-
 
 # changing the initial marking of the model through model.analysis
 
@@ -40,6 +42,9 @@ model.analysis(solver_fname = "./Schlogl_reduced.solver",
                f_time = 100, # days
                s_time = 1
 )
+
+display_data(volume = "./")
+stop_display() 
 
 AnalysisPlot = ModelAnalysisPlot(solverTraces_path = "./Schlogl_reduced_analysis/")
 p2 <- AnalysisPlot$list.plX1$plX1.1
@@ -58,27 +63,10 @@ model.analysis(solver_fname = "./Schlogl_reduced.solver",
                s_time = 1
 )
 
+display_data(volume = "./")
+stop_display() 
+
 AnalysisPlot = ModelAnalysisPlot(solverTraces_path = "./Schlogl_reduced_analysis",
                                  Stoch = T)
 AnalysisPlot$list.plX1
-
-
-### Sensitivity analysis
-
-##########################################################
-## Simple version where only the initial marking of the X1 place vary. ##
-##########################################################
-
-start_time <- Sys.time()
-sensitivity<-model.sensitivity(n_config = 100,
-                               parameters_fname = "Input/Functions_list_sensitivity.csv", 
-                               solver_fname = "Schlogl_reduced.solver",
-                               functions_fname = "Rfunction/Functions.R",
-                               target_value =  "Target" ,
-                               f_time = 100, # days
-                               s_time = 1, # days      
-                               parallel_processors = 2
-)
-
-end_time <- Sys.time()-start_time
 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="ToggleSwitch" version="121">
+  <gspn name="PetriNet">
+    <nodes>
+      <place label-x="2.0" name="GeneA" x="7.0" y="8.0"/>
+      <place label-x="-1.5" label-y="-1.5" name="GeneB" x="18.0" y="16.0"/>
+      <transition delay="FromList[&quot;Alpha1&quot;, 0] / (1+ #GeneB * #GeneB )" delay-x="-3.5" delay-y="-3.0" name="TranscriptionA" nservers-x="0.5" type="EXP" x="18.55" y="8.0"/>
+      <transition label-y="-1.0" name="DegradationA" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="7.55" y="3.0"/>
+      <transition label-y="1.0" name="DegradationB" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="18.55" y="22.0"/>
+      <transition delay="FromList[&quot;Alpha2&quot;, 0] / (1+ #GeneA * #GeneA  ) " delay-x="-6.0" delay-y="3.0" label-y="1.5" name="TranscriptionB" nservers-x="0.5" type="EXP" x="7.55" y="16.0"/>
+    </nodes>
+    <edges>
+      <arc head="DegradationA" kind="INPUT" tail="GeneA"/>
+      <arc head="DegradationB" kind="INPUT" tail="GeneB"/>
+      <arc head="TranscriptionB" kind="INPUT" tail="GeneA"/>
+      <arc head="GeneB" kind="OUTPUT" tail="TranscriptionB"/>
+      <arc head="TranscriptionA" kind="INPUT" tail="GeneB"/>
+      <arc head="GeneA" kind="OUTPUT" tail="TranscriptionA"/>
+      <arc head="GeneA" kind="OUTPUT" tail="TranscriptionB">
+        <point x="4.5" y="17.0"/>
+        <point x="4.5" y="9.0"/>
+      </arc>
+      <arc head="GeneB" kind="OUTPUT" tail="TranscriptionA">
+        <point x="22.0" y="9.0"/>
+        <point x="22.0" y="17.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <measures gspn-name="PetriNet" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+      <formula comment="All the basic Petri net measures" language="ALL"/>
+    </formulas>
+  </measures>
+</project>

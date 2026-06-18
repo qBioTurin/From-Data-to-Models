@@ -1,0 +1,86 @@
+su: ignoring --preserve-environment, it's mutually exclusive with --login
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Listening on http://127.0.0.1:46771
+
+Attaching package: ‘bslib’
+
+The following object is masked from ‘package:utils’:
+
+    page
+
+
+Attaching package: ‘colourpicker’
+
+The following object is masked from ‘package:shiny’:
+
+    runExample
+
+
+Attaching package: ‘shinyWidgets’
+
+The following object is masked from ‘package:bslib’:
+
+    show_toast
+
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Downloading google font Outfit to local cache (/tmp/RtmpGxxxGA/sass-3fac31e4d6)
+Downloading google font Outfit to local cache (/tmp/RtmpGxxxGA/sass-3fa5a86d00b)
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning in dir.create(cache_dir, recursive = TRUE) :
+  cannot create dir '/srv/shiny-server/display/app_cache', reason 'Permission denied'
+Warning in value[[3L]](cond) :
+  Error using cache directory at '/srv/shiny-server/display/app_cache/sass'. Using temp dir instead.
+Warning: Error in .getReactiveEnvironment()$currentContext: Operation not allowed without an active reactive context.
+• You tried to do something that can only be done from inside a reactive consumer.
+  40: <Anonymous>
+  39: signalCondition
+  38: signal_abort
+  37: rlang::abort
+  36: .getReactiveEnvironment()$currentContext
+  35: getCurrentContext
+  34: private$dependents$register
+  33: rv$get
+  32: cloud_path
+  31: callback [/srv/shiny-server/display/R/mod_data_inputs.R#116]
+   1: runApp

@@ -11,41 +11,15 @@ Welcome to the GitHub repository for the **PhD Course: From Data to Models**. Th
 The repository is organized into four folders:
 
 - `Day1`: Introduction to mechanistic modeling, Petri Nets, and the epimod framework
-- `Day2`: Working with experimental data and defining models
-- `Day3`: Model calibration, prediction, and FBA
-- `Day4`: Data integration and advanced modeling strategies
+- `Day2`: Model calibration, prediction, and senstivity analysis 
+- `Day3`: Working with experimental data and defining models
+- `Day4`: FBA, Data integration and advanced modeling strategies
 
 Each folder includes:
 - Slides
 - Scripts
 - Hands-on examples and datasets
 
----
-
-## Course Outline
-
-### Day 1 – Introduction to Mechanistic Modeling and the Importance of Data
-- Welcome and course overview
-- Introduction to computational models in biology
-- Mechanistic modeling foundations: Petri Nets and the epimod framework
-- Hands-on session: the Schlögl model, exploring dynamics and sensitivity
-
-### Day 2 – From Case Study to Data Analysis
-- From experimental data to model parameters
-- Real-world case study: biological context and modeling needs
-- Hands-on session: data analysis using ORCA
-- Model construction from raw data
-
-### Day 3 – Calibration and Predictive Modeling
-- Overview of model calibration techniques
-- Performing predictive simulations and what-if analyses
-- Introduction to Flux Balance Analysis (FBA)
-
-### Day 4 – Data Integration and Advanced Modeling
-- Integrating FBA with experimental data for improved predictions
-- Introduction to UnifiedGreatMOD for linking heterogeneous data and models
-- Hands-on session: FBA case study with integrated data
-- Course wrap-up and summary of key concepts
 
 ---
 
